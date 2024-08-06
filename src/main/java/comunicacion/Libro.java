@@ -48,12 +48,12 @@ public class Libro extends Escrito {
 
 	
 	@Override
-	int palabrasTotales(int palabrasPagina) {
+	public int palabrasTotales(int palabrasPagina) {
 		return super.getPaginas()*2*palabrasPagina;
 	}
 
 	@Override
-	String interpretacion() {
+	public String interpretacion() {
 		return interpretacion;
 	}
 
