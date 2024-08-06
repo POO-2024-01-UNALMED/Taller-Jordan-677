@@ -1,16 +1,42 @@
 package comunicacion;
 
 public class Fabula extends Escrito {
+	private String ensenanza;
+	private String interpretacion;
 
-	public Fabula(String origen, String titulo, String autor, int paginas) {
+	public Fabula(String origen, String titulo, String autor, int paginas,String ensenanza, String interpretacion) {
 		super(origen, titulo, autor, paginas);
-		// TODO Auto-generated constructor stub
+		this.ensenanza=ensenanza;
+		this.interpretacion=interpretacion;
 	}
 
+	public String getEnsenanza() {
+		return ensenanza;
+	}
+
+
+
+	public void setEnsenanza(String ensenanza) {
+		this.ensenanza = ensenanza;
+	}
+
+
+
+	public String getInterpretacion() {
+		return interpretacion;
+	}
+
+
+
+	public void setInterpretacion(String interpretacion) {
+		this.interpretacion = interpretacion;
+	}
+
+
+
 	@Override
-	int palabrasTotales(int palabrasPagina) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int palabrasTotales(int palabrasPagina) {
+		return super.getPaginas()*palabrasPagina;
 	}
 
 	@Override
@@ -21,8 +47,7 @@ public class Fabula extends Escrito {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
+		return super.getOrigen()+"\n"+super.getTitulo()+"\n"+super.getAutor()+"\n"+super.getPaginas()+"\n"+ensenanza;
 	}
 
 }
